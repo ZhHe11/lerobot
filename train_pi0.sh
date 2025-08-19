@@ -1,10 +1,8 @@
-## 训练指令
-python -m lerobot.scripts.train \
+torchrun --nproc_per_node=4 -m lerobot.scripts.train \
     --dataset.repo_id=metaworld \
-    --dataset.root="/home/xlab/Dataset/metaworld_mt50" \
+    --dataset.root="/workspace/Dataset/metaworld_mt50_A100" \
     --policy.type=pi0fast \
-    --policy.checkpoint_path="/home/xlab/Checkpoint/pi0fast_ckpt" \
+    --policy.checkpoint_path="/workspace/Checkpoint/pi0fast/pi0fast_ckpt" \
     --policy.push_to_hub=false \
-    --policy.repo_id="/home/xlab/Dataset/metaworld_mt50" \
-
+    --policy.repo_id="/workspace/Dataset/metaworld_mt50_A100"
 

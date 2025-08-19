@@ -9,7 +9,5 @@ policy = PI0FASTPolicy.from_pretrained(
     local_files_only=True  # 确保不联网
 )
 
-
-
 print("Model loaded successfully from local path.")
 
